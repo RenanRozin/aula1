@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="AN()">Calculo de AN</button>
+<input type="date"><br><br><br>
+<button onclick="A1()">Calculo de A1</button><br><br><br>
+<button onclick="N()">Calculo de N</button><br><br><br>
+<button onclick="R()">Calculo de R</button><br><br><br>
+<input type="email" placeholder="Digite seu email">
+<input type="password" placeholder="Digite sua senha"><br><br>
+<a  href="https://www.youtube.com/watch?v=bG72w0edwUs">Cliquei aqui para ouvir um bom som!!</a>
+</body>
+</html>
+<script>
+    function AN(){
+        var a1 = Number(prompt("Digite o valor para A1"));
+        var n = Number(prompt("Digite o valor para N"));
+        var r = Number(prompt("Digite o valor para R"));
+        var an = a1 + (n-1) * r;
+        var msg = "Valor de AN é: ("+an+")";
+        alert (msg)
+    }
+    function A1(){
+        var an = Number(prompt("Digite o valor de AN"));
+        var n = Number (prompt("Digite o valor de N"));
+        var r = Number (prompt("Digite o valor de R"));
+        var a1 = an-(n-1)*r
+        var msg = "Valor de A1 é: ("+a1+")" ;
+        alert (msg)
+    }
+    function N(){
+        var an = Number(prompt("Digite o valor para AN"));
+        var a1 = Number(prompt("Digite o valor de A1"));
+        var r = Number(prompt("Digite o valor de R"));
+        var n = 1+((an - a1)/r)
+        var msg = "Valor de N é: ("+n+")"
+        alert (msg)
+
+    }
+    function R(){
+        var an = Number(prompt("Digite o valor para AN"));
+        var n = Number (prompt("Digite o valor de N"));
+        var a1 = Number (prompt("Digite o valor de A1"));
+        var r = (an-a1)/(n-1)
+        var msg = "Valor de R é: ("+r+")"
+        alert (msg)
+
+    }
+</script>
