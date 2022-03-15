@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <p>! MENU PARA CONVERSÃO DE TEMPERATURAS !</p>
+<input id="num" type="number" placeholder="Digite aqui"> <br><br>  
+<input id="cf" type="radio" name="temp">Celsius para Fahrenheit</input><br><br>
+<input id="fc" type="radio" name="temp">Fahrenheit para Celsius</input><br><br>
+<input id="ck" type="radio" name="temp">    Celsius para Kelvin</input><br><br>
+<input id="kc" type="radio" name="temp">    Kelvin para Celsius</input><br><br> 
+<input id="fk" type="radio" name="temp"> Fahrenheit para Kelvin</input><br><br> 
+<input id="kf" type="radio" name="temp"> Kelvin para Fahrenheit</input><br><br>  
+<button onclick="calculo()">Calcular</button>
+<P id="resu">Resultado</P>
+</center>
+</body>
+</html>
+<script>
+    var campo = document.getElementById("num");
+    var rcf = document.getElementById("cf");
+    var rfc = document.getElementById("fc");
+    var rck = document.getElementById("ck");
+    var rkc = document.getElementById("kc");
+    var rfk = document.getElementById("fk");
+    var rkf = document.getElementById("kf");
+    var r = document.getElementById("resu");
+
+    function calculo(){
+        var tempe = Number(campo.value)
+        if(rcf.checked){
+            r.innerHTML = tempe * 9/5 + 32 + "ºF"
+        }
+        
+    
+    else if(rfc.checked){
+        r.innerHTML = (tempe - 32) * 5/9 + "ºC"
+    }
+    else if(rck.checked){
+        r.innerHTML = tempe + 273.15 + "ºK"
+    }
+    else if(rkc.checked){
+        r.innerHTML = tempe - 273.15 + "ºC"
+    }
+    else if(rfk.checked){
+        r.innerHTML = (tempe - 32) * 5/9 + 273.15 + "ºK"
+    }
+    else if(rkf.checked){
+        r.innerHTML = (tempe - 273.15) * 9/5 + 32 + "ºF"
+    }
+    else{ alert("Voce precisa escolher uma das opções !!")
+        
+    }
+    
+
+    }
+
+
+
+</script>
